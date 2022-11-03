@@ -47,6 +47,6 @@ jobs:
       
       - uses: actions/upload-artifact@v3
         with:
-          name: JAR
-          path: exchange
+          name: Mule App JAR
+          path: staging
 
