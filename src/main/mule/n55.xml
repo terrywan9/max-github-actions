@@ -9,7 +9,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="n55Flow" doc:id="31041ae7-f4b4-45b9-a8cf-80a0191a0765" >
 		<http:listener doc:name="Listener" doc:id="7e5c6b20-404f-4437-a83e-7d080621fb14" config-ref="HTTP_Listener_config" path="/api/v1/hello"/>
-		<set-payload value="&quot;Hello, Max! I'm hit!&quot;" doc:name="Set Payload" doc:id="af6f8cb2-9fc6-4104-a10b-2630458c47ed" />
+		<set-payload value="&quot;Hello, MaxHub! I'm hit!&quot;" doc:name="Set Payload" doc:id="af6f8cb2-9fc6-4104-a10b-2630458c47ed" />
 		<logger level="INFO" doc:name="Logger" doc:id="3b11a5b8-907c-45bb-8bb7-cb640461f3ee" message="attributes.requestPath &quot;I'm Hit!&quot;"/>
 	</flow>
 </mule>
