@@ -40,8 +40,8 @@ jobs:
           server-id: github
       - uses: s4u/maven-settings-action@v2.7.0
         with:
-          anypoint-exchange-v3: '[{"id": "anypoint-exchange-v3", "username": "${{ secrets.ANYPOINT_USERNAME }}", "password": "${{ ANYPOINT_PASSWORD }}"}]'
-          Repository: '[{"id": "Repository", "username": "${{ secrets.ANYPOINT_USERNAME }}", "password": "${{ ANYPOINT_PASSWORD }}"}]'
+          anypoint-exchange-v3: '[{"id": "anypoint-exchange-v3", "username": "${{ secrets.ANYPOINT_USERNAME }}", "password": "${{ secrets.ANYPOINT_PASSWORD }}"}]'
+          Repository: '[{"id": "Repository", "username": "${{ secrets.ANYPOINT_USERNAME }}", "password": "${{ secrets.ANYPOINT_PASSWORD }}"}]'
 
       - name: JOB settings DETAILS
         run: |
