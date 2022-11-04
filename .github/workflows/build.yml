@@ -47,6 +47,6 @@ jobs:
       
       - uses: actions/upload-artifact@v3
         with:
-          name: ${GITHUB_REPOSITORY#*/}-${{ github.sha }}
+          name: ${GITHUB_REPOSITORY#*/}
           path: staging
 
