@@ -71,4 +71,4 @@ jobs:
           ANYPOINT_USERNAME: ${{ secrets.ANYPOINT_USERNAME }}
           ANYPOINT_PASSWORD: ${{ secrets.ANYPOINT_PASSWORD }}
         run: |
-          mvn deploy -DmuleDeploy -Dusername="$env:ANYPOINT_USERNAME" -Dpassword="$env:ANYPOINT_PASSWORD" -Dname=maxhub -Denvironment=Production -Dprovider=MC -Druntime.fabric.application.name=maxhub -DreplicationFactor=2 -Dtarget=rtf-appliance-rhel
+          mvn deploy -DmuleDeploy -Dusername="$ANYPOINT_USERNAME" -Dpassword="$ANYPOINT_PASSWORD" -Dname=maxhub -Denvironment=Production -Dprovider=MC -Druntime.fabric.application.name=maxhub -DreplicationFactor=2 -Dtarget=rtf-appliance-rhel
