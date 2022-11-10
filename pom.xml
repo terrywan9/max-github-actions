@@ -33,8 +33,11 @@
 					<runtimeFabricDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>${app.runtime}</muleVersion>
-						<username>${username}</username>
-						<password>${password}</password>
+						<connectedAppClientId>${anypoint.username}</connectedAppClientId>
+						<connectedAppClientSecret>${anypoint.password}</connectedAppClientSecret>
+						<connectedAppGrantType>client_credentials</connectedAppGrantType>
+						<!-- <username>${username}</username> -->
+						<!-- <password>${password}</password> -->
 						<applicationName>${runtime.fabric.application.name}</applicationName>
 						<businessGroupId>${businessgroup.id}</businessGroupId>
 						<target>${target}</target>
