@@ -68,7 +68,7 @@ jobs:
       
       - shell: bash
         env:
-          ANYPOINT_USERNAME: ${{ secrets.ANYPOINT_USERNAME }}
-          ANYPOINT_PASSWORD: ${{ secrets.ANYPOINT_PASSWORD }}
+          ANYPOINT_USERNAME: ${{ secrets.CONNECTED_APP_ID }}
+          ANYPOINT_PASSWORD: ${{ secrets.CONNECTED_APP_SECRET }}
         run: |
-          mvn deploy -DmuleDeploy -Dusername="$ANYPOINT_USERNAME" -Dpassword="$ANYPOINT_PASSWORD" -Dname=maxhub -Denvironment=Production -Dprovider=MC -Druntime.fabric.application.name=maxhub -DreplicationFactor=2 -Dtarget=rtf-appliance-rhel
+          mvn deploy -DmuleDeploy -Dusername="$CONNECTED_APP_ID" -Dpassword="$CONNECTED_APP_SECRET" -Dname=maxhub -Denvironment=Production -Dprovider=MC -Druntime.fabric.application.name=maxhub -DreplicationFactor=2 -Dtarget=rtf-appliance-rhel
