@@ -19,6 +19,7 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: self-hosted
+    # runs-on: ubuntu-latest
   
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -38,18 +39,19 @@ jobs:
           cache: 'maven'
           java-version: 8
           server-id: github
+      
       - uses: s4u/maven-settings-action@v2.7.0
         with:
           servers: |
             [{
               "id": "Repository",
-              "username": "${{ secrets.ANYPOINT_USERNAME }}",
-              "password": "${{ secrets.ANYPOINT_PASSWORD }}"
+              "username": "$~~~Client~~~",
+              "password": "${{ secrets.CONNECTED_APP_MVN }}"
               },
               {
                 "id": "anypoint-exchange-v3",
-                "username": "${{ secrets.ANYPOINT_USERNAME }}",
-                "password": "${{ secrets.ANYPOINT_PASSWORD }}"
+                "username": "~~~Client~~~",
+                "password": "${{ secrets.CONNECTED_APP_MVN }}"
               }]
           
       - name: JOB settings DETAILS
