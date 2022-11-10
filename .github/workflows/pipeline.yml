@@ -45,7 +45,7 @@ jobs:
           servers: |
             [{
               "id": "Repository",
-              "username": "$~~~Client~~~",
+              "username": "~~~Client~~~",
               "password": "${{ secrets.CONNECTED_APP_MVN }}"
               },
               {
